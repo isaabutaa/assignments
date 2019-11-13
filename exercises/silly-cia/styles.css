@@ -1,0 +1,44 @@
+h1 {
+    color: green;
+}
+
+body {
+    margin: 50px 50px;
+}
+
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+}
+
+.first-two-paragraphs {
+    font-size: larger;
+}
+
+.list {
+    font-size: larger;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+
+.you-might-like {
+    text-transform: uppercase;
+}
+
+img {
+    float: left;
+    height: 165px;
+    width: 200px;
+    padding: 10px;
+}
+
