@@ -1,0 +1,67 @@
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    border-bottom: solid;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.date {
+    text-align: center;
+    font-style: oblique;
+}
+
+nav {
+    padding: 5px;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    display: block;
+}
+
+.small-article {
+    display: inline-block;
+    width: 200px;
+    border-right: solid;
+    padding-right: 10px;
+    margin-right: 20%;
+    position: absolute;
+}
+
+.small-article img {
+    height: 300px;
+    width: auto;
+}
+
+.main-article {
+    display: inline-block;
+    width: 700px;
+    position: absolute;
+    margin-left: 225px;
+}
+
+.main-article p {
+    width: 150px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.main-article img {
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
