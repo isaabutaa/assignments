@@ -65,3 +65,12 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+
+p span {
+    color: crimson;
+}
+
+h2 span {
+    font-style: italic;
+    background-color: rgb(219, 163, 130);
+}
