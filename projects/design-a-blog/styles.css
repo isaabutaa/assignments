@@ -1,0 +1,62 @@
+body {
+    background-color: lavenderblush;
+}
+
+header {
+    height: 10%;
+    width: inherit;
+    position: relative;
+    background-color: goldenrod;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    background-color: honeydew;
+    display: block;
+}
+
+.navbar li {
+    text-decoration-line: none;
+    display: inline;
+    text-align: center;
+    padding: 2.5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    left: 20%;
+}
+
+/* main {
+    position: relative;
+    top: 20%;
+} */
+
+.blog-container {
+    height: inherit;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    right: 25%;
+    /* top: 20%; */
+}
+
+h3 {
+    width: 25%;
+    display: inline-block;
+}
+
+.date {
+    width: 75%;
+    display: inline-block;
+}
+
+p {
+    width: auto;
+    display: inline-block;
+}

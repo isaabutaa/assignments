@@ -278,3 +278,6 @@ for(var i = 0; i < oleOneTwoArr.length; i++){
   gridX.push(preGridX)
 }
 console.log(gridX) 
+
+
+
