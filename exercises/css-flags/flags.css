@@ -241,3 +241,26 @@
     bottom: 38%;
     left: 18%;
 }
+
+
+/* Japanese flag */
+.japan {
+    height: 300px;
+    width: 400px;
+    border: solid 1px black;
+    position: relative;
+    margin: 0%;
+    display: inline-block;
+    top: 155px;
+}
+
+.red-circle {
+    height: 45%;
+    width: 35%;
+    border-radius: 80%;
+    background-color: red;
+    position: relative;
+    margin: 0%;
+    top: 35%;
+    left: 35%;
+}
