@@ -69,7 +69,7 @@ function scrollTroll(){
     }
 }
 
-flashingBox.addEventListener("scroll", scrollTroll)
+window.addEventListener("scroll", scrollTroll)
 
 // 6 - keypress multiple colors
 function aliciaKeys(){

@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+.final-answer {
+    margin-top: 15pt;
+    background-color: green;
+    
+}
+
+.product-container {
+    margin-top: 15pt;
+    background-color: yellow;
+}
+
+.remainder-container {
+    margin-top: 15pt;
+    background-color: tomato;
+}
