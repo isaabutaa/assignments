@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mario's Pest Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Image of Mario" class="header-image">
+        <h1>Mario's Pest Control</h1>
+    </header>
+    <div class="container">
+        <div class="left-spacer"></div>
+
+        <form name="baddie-form">
+            <h2>I specialize in squashing Baddies!</h2>
+            
+            <div class="baddie-images-names">
+                <h5>Baddie Types:</h5>
+                <ul>
+                    <li><img src="" alt="Goomba image">Goomba</li>
+                    <li><img src="" alt="Bob-bomb image">Bob-omb</li>
+                    <li><img src="" alt="Cheep-cheep image">Cheep-cheep</li>
+                </ul>
+            </div>
+            
+            <div class="rate">
+                <h5>How much I charge for squashing each Baddie:</h5>
+                <ul>
+                    <li>Goombas: 5 coins</li>
+                    <li>Bob-ombs: 7 coins</li>
+                    <li>Cheep-cheeps: 11 coins</li>
+                </ul>
+            </div>
+            
+            <div class="number-squashed">
+                <h5>I've squashed this many Baddies:</h5>
+                <p>Goombas:</p>
+                <input 
+                type="number" 
+                name="goombas-squashed"
+                placeholder="Enter number value">
+                <p>Bob-ombs</p>
+                <input 
+                type="number" 
+                name="bob-bombs-squashed"
+                placeholder="Enter number value">
+                <p>Cheep-cheeps</p>
+                <input 
+                type="number" 
+                name="cheep-cheeps-squashed"
+                placeholder="Enter number value">
+
+                <button>Submit</button>
+            </div>
+
+            <div id="coins-list"></div>
+        </form>
+
+        <div class="right-spacer"></div>
+    </div>
+    <footer>
+        <p>If you wish to use my Baddie-squashing services, contact me:</p>
+        <nav>
+            <p>Email: <a href="">mario@marios-pest-control.com</a></p>
+            <p>Tel: <a href="">(801) 123 - 4567</a></p>
+            <p>Address: <a href="">P.O. Box, No.1</a></p>
+        </nav>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

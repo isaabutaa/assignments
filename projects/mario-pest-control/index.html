@@ -15,39 +15,30 @@
     <main>
         <h2>I specialize in squashing Baddies!</h2>
         
-        <div id="baddie-rate-container">
+        <div class="baddie-rate-container">
             <div class="baddies">
-                <div class="baddie">
+                <div class="goomba-image-name">
                     <img src="" alt="Image of a Goomba">
                     <p>Goomba</p>
                 </div>
-                <div class="baddie">
+                <div class="bobomb-image-name">
                     <img src="" alt="Image of a Bob-omb">
                     <p>Bob-omb</p>
                 </div>
-                <div class="baddie">
+                <div class="cheep-image-name">
                     <img src="" alt="Image of a Cheep-cheep">
                     <p>Cheep-cheep</p>
                 </div>
             </div>
 
-            <div class="total-squashed" id="squashedContainer">
+            <div class="total-squashed">
                 <div class="squashed">
-                    <form name="goombasForm">
-                        <input type="number" name="goombasSquashed" class="">
+                    <form name="squashed">
+                        <input type="number" name="goombasSquashed" class="goombas-squashed">
+                        <input type="number" name="bobombsSquashed" class="bobombs-squashed">
+                        <input type="number" name="cheepsSquashed" class="cheeps-squashed">
+                        <button id="submit-num-squashed">Submit</button>
                     </form>
-                </div>
-                <div class="squashed">
-                    <form name="bobombsForm">
-                        <input type="number" name="bobombsSquashed" class="">
-                    </form>
-                </div>
-                <div class="squashed">
-                    <form name="cheepsForm">
-                        <input type="number" name="cheepsSquashed" class="">
-                    </form>
-                </div>
-                <button id="submit-num-squashed">Submit</button>
             </div>
 
             <div class="rate-of-service">
@@ -84,3 +75,19 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
+<!-- <form name="goombasForm">
+        <input type="number" name="goombasSquashed" class="">
+    </form>
+</div>
+<div class="squashed">
+    <form name="bobombsForm">
+        <input type="number" name="bobombsSquashed" class="">
+    </form>
+</div>
+<div class="squashed">
+    <form name="cheepsForm">
+        <input type="number" name="cheepsSquashed" class="">
+    </form>
+</div> -->

@@ -1,0 +1,53 @@
+
+
+
+.baddie-rate-container {
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    width: 100vw;
+}
+
+.baddies {
+    display: inline-block;
+    /* width: 33vw; */
+}
+
+.goomba-image-name {
+    
+}
+
+.bobomb-image-name {
+
+}
+
+.cheep-image-name {
+
+}
+
+.total-squashed {
+    display: inline-block;
+    /* width: 33vw; */
+}
+
+.goombas-squashed {
+    display: block;
+}
+
+.bobombs-squashed {
+    display: block;
+}
+
+.cheeps-squashed {
+    display: block;
+}
+
+
+.rate-of-service {
+    display: inline-block;
+    /* width: 33vw; */
+}
+
+footer {
+    display: block;
+}
