@@ -22,8 +22,10 @@ var mathAnswer = function() {
         return firstNumber - secondNumber
     } else if(mathOperations[mathChoice] === "multiply") {
         return firstNumber * secondNumber
-    } else {
+    } else if (mathOperations[mathChoice] === "divide") {
         return firstNumber / secondNumber
+    } else {
+        break
     }
 }
 
