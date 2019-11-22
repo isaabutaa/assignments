@@ -28,10 +28,19 @@ messages[3].textContent = "Those are my thoughts exactly."
 
 //set variable name to clear button and do an addEventListener that will clear the text when clicked
 var clearBtn = document.getElementById("clear-button")
-console.log(clearBtn.addEventListener("click", function(e){
+clearBtn.addEventListener("click", function(e){
     e.preventDefault
     //create a loop that will loop through the messages and clear them
     for(var i = 0; i < messages.length; i++){
-        messages[i] = null
+        messages[i].textContent = ''
     }
-}))
+})
+
+//themes
+var themeDropDown = document.getElementById("theme-drop-down")
+themeDropDown.addEventListener("change", function(e){
+    e.preventDefault()
+    for(var i = 0; i < messages.length; i++){
+        messages[i].classList.toggle("theme-three")
+    }
+})
