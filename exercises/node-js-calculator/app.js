@@ -24,9 +24,7 @@ var mathAnswer = function() {
         return firstNumber * secondNumber
     } else if (mathOperations[mathChoice] === "divide") {
         return firstNumber / secondNumber
-    } else {
-        break
-    }
+    } 
 }
 
 console.log("The answer to your math operation is " + mathAnswer())
