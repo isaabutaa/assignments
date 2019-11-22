@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Female traveler in Jerusalem">
+        <h1>Welcome, fellow world-travelers!</h1>
+    </header>
+    <main>
+        <p><strong>Mark Twain</strong> once said:</p>
+        <p>"Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many of our people need it sorely on these accounts. Broad, wholesome, charitable views of men and things cannot be acquired by vegetating in one little corner of the earth all one's lifetime."</p>
+        <p>By embarking on your travel adventures, you are showing a maturity and enthusiasm that is very important in today's world! By traveling, we can increase our capacity for empathy and compassion for those who grew up in very different circumstances. Congratulations on this great achievement!</p>
+        <p>We sincerely thank-you for choosing Abutaa Airlines, and please enjoy your adventure!</p>
+        <div class="travel-container">
+            <p>Please enter your information below:</p>
+            <form name="travel-form">
+                <label>First name: 
+                    <input type="text" name="first-name">
+                </label>
+                <label>Last name: 
+                    <input type="text" name="last-name">
+                </label>
+                <label>Age: 
+                    <input type="number" name="age">
+                </label>
+                Gender:
+                <label>Male
+                    <input type="radio" name="gender" value="male">
+                </label>
+                <label>Female
+                    <input type="radio" name="gender" value="female">
+                </label>
+                <label>Other
+                    <input type="radio" name="gender" value="other">
+                </label>
+                <select id="travel-destination">
+                    <option value="destination-one">UK</option>
+                    <option value="destination-two">Northern Europe</option>
+                    <option value="destination-three">Ukraine</option>
+                    <option value="destination-four">Turkey</option>
+                    <option value="destination-five">Lebanon</option>
+                </select>
+                Dietary Restrictions:
+                <label>Vegetarian/Vegan
+                    <input type="checkbox" name="vegetarian-vegan" value="">
+                </label>
+                <label>Halal
+                    <input type="checkbox" name="Halal" value="">
+                </label>
+                <label>Kosher
+                    <input type="checkbox" name="Kosher" value="">
+                </label>
+                <label>Tree nuts
+                    <input type="checkbox" name="nut-allergy" value="">
+                </label>
+                <button>Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

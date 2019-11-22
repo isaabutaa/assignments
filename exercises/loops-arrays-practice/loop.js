@@ -280,4 +280,51 @@ for(var i = 0; i < oleOneTwoArr.length; i++){
 console.log(gridX) 
 
 
+// Loops exercise 11/21/19
+
+// Write a function that accepts a string as input. Write a loop and add each letter of the string to an array. Then return the that new array.
+var stringArr = []
+function stringCheez(string) {
+  for(var i = 0; i < string.length; i++){
+    stringArr.push(string[i])
+  }
+  console.log(stringArr)
+}
+stringCheez("hip-hop")
+
+// Write a function that accepts a string and a single character as inputs. Write a loop that iterates over the string, and returns the position of the first occurrence of the specified character. If the character is not found, tell that to the user by returning "Character not found!".
+function missingCharacter(string, character){
+  for(var i = 0; i < string.length; i++){
+    if(string.includes(character)){
+      return string.indexOf(character)
+    } else {
+      return "Character not found!"
+    }
+  }
+}
+console.log(missingCharacter("jeepers-creepers", "z"))
+
+// Write a function that accepts an array of numbers as a parameter. Return "Found 42!" when the number 42 is found, return "42 not found!" if it is not in the array.
+function jackieRobinson(array){
+  for(var i = 0; i < array.length; i++){
+    if(array.includes(42)){
+      return "Found 42! Also, index of 42 in array: " + array.indexOf(42)
+    } else {
+      return "42 not found!"
+    }
+  }
+}
+console.log(jackieRobinson([3,4,6,75,34,56,42,0,1]))
+
+// Write a function that accepts 10 numbers in an array and then prints out the smallest number out of the ten without using Math.min()
+function minnieMouse(arr){
+  var min = arr[0]
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] < min){
+      min = arr[i]
+    }
+  }
+  return min
+}
+console.log(minnieMouse([235,2453,5,3,2323,345,4,5,7,567]))
 
