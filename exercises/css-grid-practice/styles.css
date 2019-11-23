@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+}
+
+div {
+    height: 25px;
+}
+.red {
+    background-color: red;
+    height: 50px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
