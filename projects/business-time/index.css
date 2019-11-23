@@ -8,27 +8,38 @@ body {
     background-color: black;
 }
 
+/* Header */
+
 header {
-    background-color: silver;
-    height: 125px;
+    background-color: black;
+    color: white;
+    height: 115px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-nav {
-    overflow: hidden;
+h1 {
+    margin-top: 25px;
+}
+
+h1 img {
+    height: 35px;
+    width: 35px;
+}
+
+.navbar {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-around;
 }
 
 .navbar > a {
-    text-decoration-line: none;
-    display: none;
+    color: white;
 }
 
-#hamburger-nav > div {
-    width: 30px;
-    height: 5px;
-    background-color: black;
-    margin: 3px 5px;
-}
+/* Main */
 
 .story {
     background-image: url(https://images.unsplash.com/photo-1464876008302-fda7c9655196?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
@@ -36,7 +47,7 @@ nav {
     background-position: center bottom;
     background-color: brown;
     height: 250px;
-    margin: 10px 0;
+    margin: 115px 0 10px 0;
 }
 
 .classified-moto {
@@ -54,16 +65,25 @@ nav {
     background-position: center;
     background-color: gray;
     height: 250px;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
 }
 
-/* .contact {
-    background-color: chocolate;
-    height: 250px;
-} */
+a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Footer */
 
 footer {
-    background-color: silver;
-    height: 125px;
-    margin: 10px 0;
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 115px;
+}
+
+.contact a {
+    color: white;
+    margin-top: 10px;
 }

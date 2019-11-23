@@ -22,7 +22,7 @@ messages[0].textContent = "Hey Scott, what do you think is the likelihood that w
 
 messages[1].textContent = "You know, Isa, that's a great question. It's neat to think about, but I think it's very unlikely."
 
- messages[2].textContent = "Yeah... I see what you're saying. I do think it'd be possible to upload our 'likeness' into a robot or computer in the future. Like... You could collect a bunch of date about your speech and mannerisms and the sound of your voice, but transferring your actual living essence to a computer does seem pretty unlikely. I mean, how do you even measure a person's essence?"
+ messages[2].textContent = "Yeah... I see what you're saying. I do think it'd be possible to upload our 'likeness' into a robot or computer in the future. Like... You could collect a bunch of data about your speech and mannerisms and the sound of your voice, but transferring your actual living essence to a computer does seem pretty unlikely. I mean, how do you even measure a person's essence?"
 
 messages[3].textContent = "Those are my thoughts exactly."
 
