@@ -22,10 +22,20 @@ messages[0].textContent = "Hey Scott, what do you think is the likelihood that w
 
 messages[1].textContent = "You know, Isa, that's a great question. It's neat to think about, but I think it's very unlikely."
 
- messages[2].textContent = "Yeah... I see what you're saying. I do think it'd be possible to upload our 'likeness' into a robot or computer in the future. Like... You could collect a bunch of data about your speech and mannerisms and the sound of your voice, but transferring your actual living essence to a computer does seem pretty unlikely. I mean, how do you even measure a person's essence?"
+messages[2].textContent = "Yeah... I see what you're saying. I do think it'd be possible to upload our 'likeness' into a robot or computer in the future. Like... You could collect a bunch of data about your speech and mannerisms and the sound of your voice, but transferring your actual living essence to a computer does seem pretty unlikely. I mean, how do you even measure a person's essence?"
 
 messages[3].textContent = "Those are my thoughts exactly."
 
+for(let i = 0; i < messages.length; i++){
+    
+    messages[i].style.borderRadius = "25px"
+    
+    if(i % 2 === 0){
+        messages[i].classList.add("right")
+    } else {
+        messages[i].classList.add("left")
+    }
+}
 //set variable name to clear button and do an addEventListener that will clear the text when clicked
 var clearBtn = document.getElementById("clear-button")
 clearBtn.addEventListener("click", function(e){
@@ -41,6 +51,45 @@ var themeDropDown = document.getElementById("theme-drop-down")
 themeDropDown.addEventListener("change", function(e){
     e.preventDefault()
     for(var i = 0; i < messages.length; i++){
-        messages[i].classList.toggle("theme-three")
+        if(themeDropDown.value === "theme-one"){
+            if(i % 2 ===0){
+                messages[i].style.backgroundColor = "blue"
+                messages[i].style.color = "white"
+            } else {
+                messages[i].style.backgroundColor = "brown"
+                messages[i].style.color = "white"
+            }
+        } else if(themeDropDown.value === "theme-two"){
+            if(i % 2 === 0){
+                messages[i].style.backgroundColor = "red"
+                messages[i].style.color = "white"
+            } else {
+                messages[i].style.backgroundColor = "black"
+                messages[i].style.color = "white"
+            }
+        } else if(themeDropDown.value === "theme-three"){
+            if(i % 2 === 0){
+                messages[i].style.backgroundColor = "blue"
+                messages[i].style.color = "white"
+            } else {
+                messages[i].style.backgroundColor = "green"
+                messages[i].style.color = "white"
+            }
+        } else {
+            messages[i].style.backgroundColor = "white"
+            messages[i].style.color = "black"
+        }
     }
 })
+
+// const submitMessage = document.message
+// const input = document.getElementById("input")
+// const newMessages = document.createElement("div")
+// newMessages.className = "message"
+// let newMessagesText = message.input.value
+// submitMessage.addEventListener("submit", function(e){
+//     e.preventDefault()
+//     newMessages.append(input.value)
+//     messages.appendChild(newMessages)
+//     console.log(newMessages)
+// })
