@@ -4,8 +4,9 @@
 }
 
 body {
-    width: 375px;;
+    width: 100%;
     background-color: black;
+    margin: 0;
 }
 
 /* Header */
@@ -22,6 +23,7 @@ header {
 
 h1 {
     margin-top: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 img {
@@ -50,11 +52,61 @@ main {
     height: 250px;
     background-color: #b7410e;
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.gallery-image img {
-    height: 100%;
-    width: 100%;
+
+.frank {
+    background-image: url("https://www.classifiedmoto.com/wp-content/uploads/2017/07/Frank_Right_profile_hero-395x263.jpg");
+    background-size: cover;
+}
+
+.five-o-1000 {
+    background-image: url("https://www.classifiedmoto.com/wp-content/uploads/2016/07/160624_CM_34028-395x263.jpg");
+    background-size: cover;
+}
+
+.bw-650 {
+    background-image: url("https://www.classifiedmoto.com/wp-content/uploads/2016/04/160107_CM_3805-395x263.jpg");
+    background-size: cover;
+}
+
+.daryl-s-bike {
+    background-image: url("https://s3.amazonaws.com/classified-moto/wp-content/uploads/2015/03/141003_CM6879_profile-397x257.jpg");
+    background-size: cover;
+}
+
+.pentagon-cafe {
+    background-image: url("https://s3.amazonaws.com/classified-moto/wp-content/uploads/2015/02/CB250-side-right-397x257.jpg");
+    background-size: cover;
+}
+
+.surf-hawk {
+    background-image: url("https://s3.amazonaws.com/classified-moto/wp-content/uploads/2014/08/CB400T-side-397x257.jpg");
+    background-size: cover;
+}
+
+.le-renard {
+    background-image: url("https://s3.amazonaws.com/classified-moto/wp-content/uploads/2015/02/CB450T-side-397x257.jpg");
+    background-size: cover;
+}
+
+.red-stripe {
+    background-image: url("https://s3.amazonaws.com/classified-moto/wp-content/uploads/2015/02/141208_CM_9931-397x257.jpg");
+    background-size: cover;
+}
+
+.reciprocity {
+    background-image: url("https://s3.amazonaws.com/classified-moto/wp-content/uploads/2014/08/XV750-side-395x263.jpg");
+    background-size: cover;
+}
+
+.junior {
+    background-image: url("https://www.classifiedmoto.com/wp-content/uploads/2018/06/junior-hero-397x257.jpg");
+    background-size: cover;
 }
 
 /* Footer */
@@ -68,9 +120,68 @@ footer {
 
 footer h1 {
     padding-top: 25px;
-    margin-top: 0;
+    margin: 0;
 }
 
 .contact a {
     color: white;
+}
+
+
+/* Media query for tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+    /* Header */
+
+    header {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h1 img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .navbar a {
+        font-size: 25px;
+    }
+
+    /* Main Content */
+
+    main {
+        margin-top: 200px;
+    }
+
+    .gallery-image {
+        height: 500px;
+        font-size: 25px;
+    }
+
+    /* Footer */
+
+    footer {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer h1 {
+        margin: 0;
+    }
+
+    .contact {
+        font-size: 25px;
+    }
+
+
+
 }
