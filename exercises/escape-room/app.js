@@ -25,7 +25,7 @@ var userOptions = readline.keyInSelect(escapeOptions, "Let me tell you your opti
             gameOver = true
         }
     } else if(escapeOptions[userOptions] === "Find the key") {
-        console.log("Aaah, it seems you found the key for the door. Now you can open the door.")
+        console.log("Aaah, it seems you found the key for the door. Now you can it.")
         findKey = true
         disableElectricShock = true
         }
