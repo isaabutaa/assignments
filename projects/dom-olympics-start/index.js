@@ -1,4 +1,4 @@
-//header
+//header////////////////////////////////////////////////////////////////////////////
 
 var headerDiv = document.getElementById("header")
 
@@ -14,7 +14,7 @@ subtitle.innerHTML = '<span class = "name"> Isa </span> wrote the JavaScript'
 
 header.appendChild(subtitle)
 
-// change messaging text
+// change messaging text///////////////////////////////////////////////////////////
 // getElementsByClassName
 var messages = document.getElementsByClassName("message")
 // change the text content of each index of the array by using bracket notation and textContent
@@ -36,6 +36,9 @@ for(let i = 0; i < messages.length; i++){
         messages[i].classList.add("left")
     }
 }
+
+// Clear the text////////////////////////////////////////////////////////////////
+
 //set variable name to clear button and do an addEventListener that will clear the text when clicked
 var clearBtn = document.getElementById("clear-button")
 clearBtn.addEventListener("click", function(e){
@@ -45,6 +48,8 @@ clearBtn.addEventListener("click", function(e){
         messages[i].textContent = ''
     }
 })
+
+// Apply the themes from the drop-down menu///////////////////////////////////////
 
 //themes
 var themeDropDown = document.getElementById("theme-drop-down")
@@ -82,14 +87,21 @@ themeDropDown.addEventListener("change", function(e){
     }
 })
 
-// const submitMessage = document.message
-// const input = document.getElementById("input")
-// const newMessages = document.createElement("div")
-// newMessages.className = "message"
-// let newMessagesText = message.input.value
-// submitMessage.addEventListener("submit", function(e){
-//     e.preventDefault()
-//     newMessages.append(input.value)
-//     messages.appendChild(newMessages)
-//     console.log(newMessages)
-// })
+// Add new messages to the already existing conversation///////////////////////////
+
+// create a new div in which the new messages will appear
+
+const messageForm = document.message
+const messageInput = document.getElementById("input")
+const messagesContainer = document.getElementsByClassName("messages")
+
+
+ messageForm.addEventListener("submit", function(e){
+    e.preventDefault()
+    const newMessage = document.createElement("div")
+    newMessage.className = "new-message"
+    newMessage.textContent = messageInput.value 
+    messagesContainer[0].appendChild(newMessage)
+ })
+
+
