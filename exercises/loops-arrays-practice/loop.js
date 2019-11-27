@@ -241,7 +241,7 @@ for(var i = 0; i < 3; i++){
   }
   realZeroGrid.push(zeroGrid)
 }
-console.log(2342343243,realZeroGrid)
+// console.log(2342343243,realZeroGrid)
 
 var oneTwoThreeGrid = []
 for(var i = 0; i < realZeroGrid.length; i++){
@@ -251,7 +251,7 @@ for(var i = 0; i < realZeroGrid.length; i++){
   }
   oneTwoThreeGrid.push(questionTwoGrid)
 }
-console.log(11152019, oneTwoThreeGrid)
+// console.log(11152019, oneTwoThreeGrid)
 
 
 var oleOneTwoArr = []
@@ -266,7 +266,7 @@ for(var i = 0; i < oneTwoThreeGrid.length; i++){
   } 
   oleOneTwoArr.push(forOtherArr)
 }
-console.log(234234234,oleOneTwoArr)
+// console.log(234234234,oleOneTwoArr)
 
 
 var gridX = []
@@ -277,7 +277,7 @@ for(var i = 0; i < oleOneTwoArr.length; i++){
   }
   gridX.push(preGridX)
 }
-console.log(gridX) 
+// console.log(gridX) 
 
 
 // Loops exercise 11/21/19
@@ -290,7 +290,7 @@ function stringCheez(string) {
   }
   console.log(stringArr)
 }
-stringCheez("hip-hop")
+// stringCheez("hip-hop")
 
 // Write a function that accepts a string and a single character as inputs. Write a loop that iterates over the string, and returns the position of the first occurrence of the specified character. If the character is not found, tell that to the user by returning "Character not found!".
 function missingCharacter(string, character){
@@ -302,7 +302,7 @@ function missingCharacter(string, character){
     }
   }
 }
-console.log(missingCharacter("jeepers-creepers", "z"))
+// console.log(missingCharacter("jeepers-creepers", "z"))
 
 // Write a function that accepts an array of numbers as a parameter. Return "Found 42!" when the number 42 is found, return "42 not found!" if it is not in the array.
 function jackieRobinson(array){
@@ -314,7 +314,7 @@ function jackieRobinson(array){
     }
   }
 }
-console.log(jackieRobinson([3,4,6,75,34,56,42,0,1]))
+// console.log(jackieRobinson([3,4,6,75,34,56,42,0,1]))
 
 // Write a function that accepts 10 numbers in an array and then prints out the smallest number out of the ten without using Math.min()
 function minnieMouse(arr){
@@ -326,5 +326,25 @@ function minnieMouse(arr){
   }
   return min
 }
-console.log(minnieMouse([235,2453,5,3,2323,345,4,5,7,567]))
+// console.log(minnieMouse([235,2453,5,3,2323,345,4,5,7,567]))
+
+
+const people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
+const alphabet = "abcdefghijklmnopqrstuvwxyz"
+const upperAlphabet = alphabet.toUpperCase()
+const splitAlphabet = upperAlphabet.split("")
+// console.log(splitAlphabet)
+const alphaPeople = []
+function forception(arr1, arr2) {
+  for(let i = 0; i < arr1.length; i++){
+    // console.log(arr1[i])
+    alphaPeople.push(`${arr1[i]}:`)
+    for(let j = 0; j < arr2.length; j++){
+      alphaPeople.push(arr2[j])
+      
+    }
+  }
+  return alphaPeople
+}
+console.log(forception(people,splitAlphabet))
 
