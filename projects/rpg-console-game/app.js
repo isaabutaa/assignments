@@ -1,9 +1,7 @@
 const readline = require("readline-sync")
 
-///// Greet the player, and give them some context for what's happening in the world around them. Why are they there? What do they need to try and do? /////
-
-console.log("\n\nHello, Player. You have been transported to an alternate dimension against your will in order to compete in a multi-universe tournament. Your opponents are no ordinary foes -- they are, in fact, alternate versions of yourself. All of you have significant skills and experiences to build upon which may help you triumph, but only one version of you can win. And only one version of yourself can return home and live out the rest of your life. In order to win and return home, you must gather 5 time-and-space crystals, which will be awarded to you one at a time at the conclusion of each tournament match, but only if you win.\n\nAre you ready?\n\nLet's begin!")
-
+ /////////////////////////////////// 
+///// Global variables ////////////
 
 ///// Get the player's information, and save it to an object. /////
 
@@ -16,18 +14,28 @@ const player = {
     inventory:{crystalsInPossession: 0}
 }
 
-player.name = readline.question("\nWhat is your name?\n\n")
-player.age = readline.question("\nHow old are you, " + player.name +"?\n\n")
+let gameOver = false
+ 
+ //////////////////////////
+///// Game functions /////
 
 ///// Let the player choose a weapon, and armour. The weapon will give them attack points, and the armour will subtract from enemy attack points. /////
 
-const weaponChoices = ["Danish axe", "Blacksmith hammer", "Twin-hook swords", "Brass knuckles", "Butcher knife", "Longsword", "Bow and Arrows"]
-const weaponSelected = readline.keyInSelect(weaponChoices, "Equip yourself with one of these deadly weapons.", {cancel: "My bare hands!"})
-player.weaponEquipped = weaponChoices[weaponSelected]
+let weaponChoices
+let weaponSelected
+function playerWeapon(){
+    weaponChoices = ["Danish axe", "Blacksmith hammer", "Twin-hook swords", "Brass knuckles", "Butcher knife", "Longsword", "Bow and Arrows"]
+    weaponSelected = readline.keyInSelect(weaponChoices, "Equip yourself with one of these deadly weapons.", {cancel: "My bare hands!"})
+    player.weaponEquipped = weaponChoices[weaponSelected]
+}
 
-const armourChoices = ["iron chainmail", "leather", "steel plate armour", "mithril", "dragon scales"]
-const armourSelected = readline.keyInSelect(armourChoices, "Now, choose a type of armour.",{cancel: "No armour - my skin is as hard as a diamond!"})
-player.armourEquipped = armourChoices[armourSelected]
+let armourChoices
+let armourSelected
+function playerArmour(){
+    armourChoices = ["iron chainmail", "leather", "steel plate armour", "mithril", "dragon scales"]
+    armourSelected = readline.keyInSelect(armourChoices, "Now, choose a type of armour.",{cancel: "No armour - my skin is as hard as a diamond!"})
+    player.armourEquipped = armourChoices[armourSelected]
+}
 
 ///// give player maxAttackPoints and maxDefensePoints based on the weapon and armor they chose /////
 
@@ -52,7 +60,6 @@ function maxAttack(){
         player.maxAttackPoints = 25
     }
 }
-maxAttack()
 
 // maxDefensePoints
 function maxDefense(){
@@ -71,27 +78,12 @@ function maxDefense(){
         player.maxDefensePoints = 25
     }
 }
-maxDefense()
 
-console.log("\nPlayer stats:\n\n", player)
- 
- /////////////////////////////////// 
-///// Game-deciding variables /////
-
-let gameOver = false
-let crystalsInPossession = 0
- 
- //////////////////////////
-///// Game functions /////
-
-// function willProceed(){
-//     const willProceed = ["yes", "no"]
-//     const playerAnswer = readline.keyInSelect(willProceed, "Will you proceed to your tournament match?")
-//     if(playerAnswer === 0) {
-//         console.log("Hold your head up high, and good luck!")
-//         enemyGenerator()
-//     }
-// }
+let playerAnswer
+function willProceed(){
+    const willProceed = ["yes", "view my stats and inventory"]
+    playerAnswer = readline.keyInSelect(willProceed, "Will you proceed to your tournament match?\n", {cancel:"quit game - I can't handle this"})
+}
 
 function atkPtsGenerator(){
     return Math.floor(Math.random() * player.maxAttackPoints) 
@@ -110,68 +102,23 @@ function enemydfnsePtsGenerator(){
 }
 
 function evadeAttack(){
-    return Math.floor(Math.random(4))
+    return Math.floor(Math.random() * 4)
 }
 
 function landAttack(){
     return Math.floor(Math.random() * 2)
 }
 
+let playerMove
 function whatsYourMove(){
-    const battleMoves = ["Attack","Evade"]
-    const playerMove = readline.keyInSelect(battleMoves, "It's your move. What will you choose?")
-
-    if(playerMove === 0){
-        landAttack()
-            if(landAttack() > 0){
-                enemy.healthPoints -= atkPtsGenerator()
-                if(enemy.healthPoints > 0){
-                    console.log("\nYou landed your attack! Your enemy's health is now:\n ", enemy.healthPoints)
-                    console.log("\nNow, it's your enemies turn...")
-                    landAttack()
-                    if(landAttack() > 0){
-                        player.healthPoints -= enemyAtkPtsGenerator()
-                        if(player.healthPoints > 0){
-                            console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
-                        } else {
-                            console.log("\nYou have been defeated. GAMEOVER")
-                            gameOver = true
-                        }
-                    } else {
-                        console.log("The enemy missed! It's your turn again.\n")
-                    }
-                } else {
-                    console.log("\nYou defeated your enemy! For winning your match, you have received one time-and-space crystal to add to your inventory.\nNow, prepare for your next match!")
-                    player.inventory.crystalsInPossession += 1
-                    if(player.healthPoints <= 50){
-                        console.log("\nYour enemy left behind some food with certain healing properties. You got 50 extra health points!")
-                        player.healthPoints += 50
-                    }
-                }
-            } else {
-                console.log("\nYou missed! Now it's the enemy's turn. Get ready!\n")
-                landAttack()
-                if(landAttack() > 0){
-                    player.healthPoints -= enemyAtkPtsGenerator()
-                    if(player.healthPoints > 0){
-                        console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
-                    } else {
-                        console.log("\nYou have been defeated. You will be trapped here for eternity. GAMEOVER")
-                        gameOver = true
-                    }
-                } else {
-                    console.log("The enemy missed! It's your turn again.\n")
-                }
-            }
-    } else if(playerMove === 1){
-        // ...
-    }
+    const battleMoves = ["Attack","Evade","Check health points"]
+    playerMove = readline.keyInSelect(battleMoves, "It's your move. What will you choose?", {cancel: "I give up - Let my enemy kill me"})
 }
 
 let enemy
 function enemyGenerator(){
     function Enemy(weapon, healthPoints, maxAttackPoints = 15, maxDefensePoints = 15){
-        this.name = "other".concat(player.name.toUpperCase()),
+        this.name = "other".concat(player.name.charAt(0).toUpperCase().concat(player.name.slice(1))),
         this.weapon = weapon,
         this.healthPoints = healthPoints,
         this.maxAttackPoints = maxAttackPoints,
@@ -185,21 +132,90 @@ function enemyGenerator(){
  ////////////////////
 ///// The Game /////
 
+console.log("\n\nHello, Player. You have been transported to an alternate dimension against your will in order to compete in a multi-universe tournament. Your opponents are no ordinary foes -- they are, in fact, alternate versions of yourself. All of you have significant skills and experiences to build upon which may help you triumph, but only one version of you can win. And only one version of yourself can return home and live out the rest of your life. In order to win and return home, you must gather 5 time-and-space crystals, which will be awarded to you one at a time at the conclusion of each tournament match, but only if you win.\n\nAre you ready?\n\nLet's begin!")
+
+player.name = readline.question("\nWhat is your name?\n\n")
+player.age = readline.question("\nHow old are you, " + player.name +"?\n\n")
+
+playerWeapon()
+maxAttack()
+playerArmour()
+maxDefense()
+
+console.log("\nPlayer stats:\n\n", player)
+
 while(!gameOver && player.inventory.crystalsInPossession < 5){
-    const willProceed = ["yes", "view my stats"]
-    const playerAnswer = readline.keyInSelect(willProceed, "Will you proceed to your tournament match?\n", {cancel:"quit game - I can't handle this"})
+    willProceed()
     if(playerAnswer === 0){
         console.log("\nHold your head up high, and good luck!\n")
         enemyGenerator()
-            while(enemy.healthPoints > 0 && player.healthPoints > 0){
+            while(enemy.healthPoints > 0 && player.healthPoints > 0 && !gameOver){
                 whatsYourMove()
-                if(player.inventory.crystalsInPossession === 5){
-                    console.log("\nIt seems you have retrieved enough space-and-time crystals to return home. You are the lucky one. Cherish those you love and enjoy the remaining days of your life.\n\nYou are transported back home, but still, you wonder... Was that real?")
+                if(playerMove === 0){
+                    landAttack()
+                    if(landAttack() > 0){
+                        enemy.healthPoints -= atkPtsGenerator()
+                        if(enemy.healthPoints > 0){
+                            console.log("\nYou landed your attack! Your enemy's health is now:\n ", enemy.healthPoints)
+                            console.log("\nNow, it's your enemies turn...")
+                            landAttack()
+                            if(landAttack() > 0){
+                                player.healthPoints -= enemyAtkPtsGenerator()
+                                if(player.healthPoints > 0){
+                                    console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
+                                } else {
+                                    console.log("\nYou have been defeated. GAMEOVER")
+                                    gameOver = true
+                                }
+                            } else {
+                                console.log("The enemy missed! It's your turn again.\n")
+                            }
+                        } else {
+                            console.log("\nYou defeated your enemy! For winning your match, you have received one time-and-space crystal to add to your inventory.")
+                            player.inventory.crystalsInPossession += 1
+                            if(player.inventory.crystalsInPossession === 5){
+                                console.log("It seems you have retrieved enough time-and-space crystals to return home. You are the lucky one. Cherish those you love and enjoy the remaining days of your life...\n\nYou are transported back home, but still, you wonder... Was that real?")
+                                gameOver = true
+                            }
+                            else if(player.healthPoints <= 50 && player.inventory.crystalsInPossession < 5){
+                                console.log("\nYour enemy left behind some food with certain healing properties. You got 50 extra health points!")
+                                player.healthPoints += 50
+                            }
+                        }
+                    } else {
+                        console.log("\nYou missed! Now it's the enemy's turn. Get ready!\n")
+                        landAttack()
+                        if(landAttack() > 0){
+                            player.healthPoints -= enemyAtkPtsGenerator()
+                            if(player.healthPoints > 0){
+                                console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
+                            } else {
+                                console.log("\nYou have been defeated. You will be trapped here for eternity. GAMEOVER")
+                                gameOver = true
+                            }
+                        } else {
+                            console.log("The enemy missed! It's your turn again.\n")
+                        }
+                    }
+                } else if(playerMove === 1){
+                    evadeAttack()
+                    console.log("\nYou choose to evade the enemy's attack. Will you be successful?")
+                    if(evadeAttack() === 0){
+                        console.log("\nYou were successful in evading your enemy's attack! Your confidence goes up and you gain 5 health points.\n")
+                        player.healthPoints += 5
+                    } else {
+                        player.healthPoints -= enemyAtkPtsGenerator()
+                        console.log("\nYou were not successful! The enemy landed their attack and your health is now:\n", player.healthPoints)
+                    }
+                } else if(playerMove === 2){
+                    console.log("\nPlayer health points:\n", player.healthPoints)
+                } else {
+                    console.log("\nAs you see your opponent charging towards you, you are overcome by a flashing feeling of hopelessness and decide to let them kill you. It is GAMEOVER.\n")
                     gameOver = true
-                } 
+                }
             }
     } else if(playerAnswer === 1) {
-        console.log("Player stats:\n", player)
+        console.log("\nPlayer stats:\n", player)
     } else {
         console.log("\nYou have forfeited your right to return home. You will be trapped here for eternity. GAMEOVER.")
         gameOver = true
