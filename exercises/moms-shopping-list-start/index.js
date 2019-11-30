@@ -48,8 +48,6 @@ addItemForm.addEventListener("submit", function(e){
 //pt. 2
 // A user will be able to delete items using an items delete button
 
-
-// const listItems = document.getElementsByClassName("list-item")
 const xButtons = document.getElementsByClassName("x-button")
 
 for(let i = 0; i < xButtons.length; i++){

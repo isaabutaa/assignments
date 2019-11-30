@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile */
+header, footer{
+    text-align: center;
+    /* background-color: #979de2; */
+    background-color: #6fc86f;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    list-style: none;
+    font-size: 20px;
+}
+
+main {
+    background-color: #b6dcb2;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.residents-container {
+    display: grid;
+    grid-gap: 10px;
+    width: 100%;
+}
+
+.residents-container h3 {
+    text-align: center;
+    color: black;
+}
+
+.large-residents, .medium-residents, .small-residents div {
+    color: white;
+}
+.large-residents {
+    display: grid;
+    grid-gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.large-cats {
+    background-color: #edc9af;
+}
+
+.big-cat-one {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.unsplash.com/photo-1527720255604-b27935ade401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.big-cat-two {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.unsplash.com/photo-1570496511808-75e02fafd239?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.big-cat-three {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.unsplash.com/photo-1552844920-9ebfbf44db66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.medium-residents {
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.medium-cats {
+    background-color: #edc9af;
+}
+
+.mid-cat-one {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.unsplash.com/photo-1571948097908-2cd3510baac3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.mid-cat-two {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.pexels.com/photos/2278163/pexels-photo-2278163.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+}
+
+.mid-cat-three {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.pexels.com/photos/209032/pexels-photo-209032.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+}
+
+.small-residents {
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.small-cats {
+    background-color: #edc9af;
+}
+
+.small-cat-one {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.pexels.com/photos/2686914/pexels-photo-2686914.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+    background-position-y: center;
+}
+
+.small-cat-two {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.pexels.com/photos/2307445/pexels-photo-2307445.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+    background-position-y: center;
+}
+
+.small-cat-three {
+    width: 100%;
+    height: 276px;
+    background-image: url("https://images.pexels.com/photos/1367067/pexels-photo-1367067.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+    background-position-y: center;
+}
+
+footer {
+    padding: 10px;
+}
+
+footer a, div {
+    font-size: 20px;
+}
