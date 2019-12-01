@@ -1,4 +1,58 @@
 body {
-    background-color: rgb(137, 173, 240);
+    margin: 0;
+    padding: 0;
+    background-color: cornflowerblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    /* font-size-adjust: inherit; */
+}
+
+header {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 0 20% 0 20%; */
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+main {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 0 20% 0 20%; */
+}
+
+h2 {
+    margin: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+p {
+    padding: 0 10px 0 10px;
+    margin: 10px;
+}
+
+.travel-container {
+    border: 3px solid cornflowerblue;
+    border-radius: 10px;
+    margin: 0 0 25px 0;
+    padding: 10px;
+}
+
+button {
+    background-color: whitesmoke;
 }
 

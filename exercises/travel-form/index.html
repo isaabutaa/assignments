@@ -10,13 +10,14 @@
 <body>
     <header>
         <img src="https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Female traveler in Jerusalem">
-        <h1>Welcome, fellow world-travelers!</h1>
+        <h1>Travel Airlines</h1>
     </header>
     <main>
+        <h2>Welcome, fellow world-travelers!</h2>
         <p><strong>Mark Twain</strong> once said:</p>
         <p>"Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many of our people need it sorely on these accounts. Broad, wholesome, charitable views of men and things cannot be acquired by vegetating in one little corner of the earth all one's lifetime."</p>
         <p>By embarking on your travel adventures, you are showing a maturity and enthusiasm that is very important in today's world! By traveling, we can increase our capacity for empathy and compassion for those who grew up in very different circumstances. Congratulations on this great achievement!</p>
-        <p>We sincerely thank-you for choosing Abutaa Airlines, and please enjoy your adventure!</p>
+        <p>We sincerely thank-you for choosing Travel Airlines, and please enjoy your adventure!</p>
         <div class="travel-container">
             <p>Please enter your information below:</p>
             
@@ -24,69 +25,70 @@
                 <label>First name: 
                     <input type="text" 
                     name="first-name">
-                </label>
+                </label><br>
 
                 <label>Last name: 
                     <input type="text" 
                     name="last-name">
-                </label>
+                </label><br>
 
                 <label>Age: 
                     <input type="number" 
                     name="age">
-                </label>
+                </label><br>
 
                 Gender:
                 <label>Male
                     <input type="radio" 
                     name="gender" 
-                    value="male">
+                    value="Male">
                 </label>
 
                 <label>Female
                     <input type="radio" 
                     name="gender" 
-                    value="female">
+                    value="Female">
                 </label>
 
                 <label>Other
                     <input type="radio" 
                     name="gender" 
-                    value="other">
-                </label>
-
-                <select id="travel-destination">
-                    <option value="destination-one">UK</option>
-                    <option value="destination-two">Northern Europe</option>
-                    <option value="destination-three">Ukraine</option>
-                    <option value="destination-four">Turkey</option>
-                    <option value="destination-five">Lebanon</option>
-                </select>
+                    value="Other">
+                </label><br>
+                
+                Travel destination: 
+                <select name="destination">
+                    <option value="UK">UK</option>
+                    <option value="Northern Europe">Northern Europe</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Lebanon">Lebanon</option>
+                </select><br>
 
                 Dietary Restrictions:
-                <label>Vegetarian/Vegan
+                <label>Vegan
                     <input type="checkbox" 
-                    name="vegetarian-vegan" 
-                    value="">
+                    name="diet" 
+                    value="Vegan">
                 </label>
 
                 <label>Halal
                     <input type="checkbox" 
-                    name="Halal" 
+                    name="diet" 
                     value="Halal">
                 </label>
 
                 <label>Kosher
                     <input type="checkbox" 
-                    name="Kosher" 
+                    name="diet" 
                     value="Kosher">
                 </label>
 
                 <label>Tree nuts
                     <input type="checkbox" 
-                    name="tree-nut-allergy" 
-                    value="Tree-nut-allergy">
-                </label>
+                    name="diet" 
+                    value="Tree-nut allergy">
+                </label><br>
 
                 <button>Submit</button>
             </form>

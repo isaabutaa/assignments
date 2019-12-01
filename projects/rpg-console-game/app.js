@@ -149,71 +149,71 @@ while(!gameOver && player.inventory.crystalsInPossession < 5){
     if(playerAnswer === 0){
         console.log("\nHold your head up high, and good luck!\n")
         enemyGenerator()
-            while(enemy.healthPoints > 0 && player.healthPoints > 0 && !gameOver){
-                whatsYourMove()
-                if(playerMove === 0){
-                    landAttack()
-                    if(landAttack() > 0){
-                        enemy.healthPoints -= atkPtsGenerator()
-                        if(enemy.healthPoints > 0){
-                            console.log("\nYou landed your attack! Your enemy's health is now:\n ", enemy.healthPoints)
-                            console.log("\nNow, it's your enemies turn...")
-                            landAttack()
-                            if(landAttack() > 0){
-                                player.healthPoints -= enemyAtkPtsGenerator()
-                                if(player.healthPoints > 0){
-                                    console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
-                                } else {
-                                    console.log("\nYou have been defeated. GAMEOVER")
-                                    gameOver = true
-                                }
-                            } else {
-                                console.log("The enemy missed! It's your turn again.\n")
-                            }
-                        } else {
-                            console.log("\nYou defeated your enemy! For winning your match, you have received one time-and-space crystal to add to your inventory.")
-                            player.inventory.crystalsInPossession += 1
-                            if(player.inventory.crystalsInPossession === 5){
-                                console.log("It seems you have retrieved enough time-and-space crystals to return home. You are the lucky one. Cherish those you love and enjoy the remaining days of your life...\n\nYou are transported back home, but still, you wonder... Was that real?")
-                                gameOver = true
-                            }
-                            else if(player.healthPoints <= 50 && player.inventory.crystalsInPossession < 5){
-                                console.log("\nYour enemy left behind some food with certain healing properties. You got 50 extra health points!")
-                                player.healthPoints += 50
-                            }
-                        }
-                    } else {
-                        console.log("\nYou missed! Now it's the enemy's turn. Get ready!\n")
+        while(enemy.healthPoints > 0 && player.healthPoints > 0 && !gameOver){
+            whatsYourMove()
+            if(playerMove === 0){
+                landAttack()
+                if(landAttack() > 0){
+                    enemy.healthPoints -= atkPtsGenerator()
+                    if(enemy.healthPoints > 0){
+                        console.log("\nYou landed your attack! Your enemy's health is now:\n ", enemy.healthPoints)
+                        console.log("\nNow, it's your enemies turn...")
                         landAttack()
                         if(landAttack() > 0){
                             player.healthPoints -= enemyAtkPtsGenerator()
                             if(player.healthPoints > 0){
                                 console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
                             } else {
-                                console.log("\nYou have been defeated. You will be trapped here for eternity. GAMEOVER")
+                                console.log("\nYou have been defeated. GAMEOVER")
                                 gameOver = true
                             }
                         } else {
                             console.log("The enemy missed! It's your turn again.\n")
                         }
-                    }
-                } else if(playerMove === 1){
-                    evadeAttack()
-                    console.log("\nYou choose to evade the enemy's attack. Will you be successful?")
-                    if(evadeAttack() === 0){
-                        console.log("\nYou were successful in evading your enemy's attack! Your confidence goes up and you gain 5 health points.\n")
-                        player.healthPoints += 5
                     } else {
-                        player.healthPoints -= enemyAtkPtsGenerator()
-                        console.log("\nYou were not successful! The enemy landed their attack and your health is now:\n", player.healthPoints)
+                        console.log("\nYou defeated your enemy! For winning your match, you have received one time-and-space crystal to add to your inventory.")
+                        player.inventory.crystalsInPossession += 1
+                        if(player.inventory.crystalsInPossession === 5){
+                            console.log("It seems you have retrieved enough time-and-space crystals to return home. You are the lucky one. Cherish those you love and enjoy the remaining days of your life...\n\nYou are transported back home, but still, you wonder... Was that real?")
+                            gameOver = true
+                        }
+                        else if(player.healthPoints <= 50 && player.inventory.crystalsInPossession < 5){
+                            console.log("\nYour enemy left behind some food with certain healing properties. You got 50 extra health points!")
+                            player.healthPoints += 50
+                        }
                     }
-                } else if(playerMove === 2){
-                    console.log("\nPlayer health points:\n", player.healthPoints)
                 } else {
-                    console.log("\nAs you see your opponent charging towards you, you are overcome by a flashing feeling of hopelessness and decide to let them kill you. It is GAMEOVER.\n")
-                    gameOver = true
+                    console.log("\nYou missed! Now it's the enemy's turn. Get ready!\n")
+                    landAttack()
+                    if(landAttack() > 0){
+                        player.healthPoints -= enemyAtkPtsGenerator()
+                        if(player.healthPoints > 0){
+                            console.log("The enemy attacked! Your health is now:\n", player.healthPoints)
+                        } else {
+                            console.log("\nYou have been defeated. You will be trapped here for eternity. GAMEOVER")
+                            gameOver = true
+                        }
+                    } else {
+                        console.log("The enemy missed! It's your turn again.\n")
+                    }
                 }
+            } else if(playerMove === 1){
+                evadeAttack()
+                console.log("\nYou choose to evade the enemy's attack. Will you be successful?")
+                if(evadeAttack() === 0){
+                    console.log("\nYou were successful in evading your enemy's attack! Your confidence goes up and you gain 5 health points.\n")
+                    player.healthPoints += 5
+                } else {
+                    player.healthPoints -= enemyAtkPtsGenerator()
+                    console.log("\nYou were not successful! The enemy landed their attack and your health is now:\n", player.healthPoints)
+                }
+            } else if(playerMove === 2){
+                console.log("\nPlayer health points:\n", player.healthPoints)
+            } else {
+                console.log("\nAs you see your opponent charging towards you, you are overcome by a flashing feeling of hopelessness and decide to let them kill you. It is GAMEOVER.\n")
+                gameOver = true
             }
+        }
     } else if(playerAnswer === 1) {
         console.log("\nPlayer stats:\n", player)
     } else {

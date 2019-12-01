@@ -1,19 +1,36 @@
 body {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue;
+}
+
+#addForm, #multiplyForm, #subtractForm {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 55%;
 }
 
 .final-answer {
     margin-top: 15pt;
     background-color: green;
+    border: 1px solid green;
+    border-radius: 5px;
     
 }
 
 .product-container {
     margin-top: 15pt;
     background-color: yellow;
+    border: 1px solid yellow;
+    border-radius: 5px;
 }
 
 .remainder-container {
     margin-top: 15pt;
     background-color: tomato;
+    border: 1px solid tomato;
+    border-radius: 5px;
 }
