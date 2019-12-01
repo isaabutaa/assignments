@@ -5,13 +5,10 @@ var headerDiv = document.getElementById("header")
 var header = document.createElement("h1")
 header.classList.add("header")
 header.textContent = "JavaScript Made This!!"
-
 headerDiv.appendChild(header)
 
 var subtitle = document.createElement("h5")
-// subtitle.className = "name"
 subtitle.innerHTML = '<span class = "name"> Isa </span> wrote the JavaScript'
-
 header.appendChild(subtitle)
 
 // change messaging text///////////////////////////////////////////////////////////
