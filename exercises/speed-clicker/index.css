@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 100px;
+    text-align: center;
+}
+
+#red-box {
+    width: 200px;
+    height: 200px;
+    background-color: firebrick;
+    margin: 0 100px 100px 100px;
+}
