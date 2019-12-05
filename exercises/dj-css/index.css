@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header {
+    margin: 25px;
+}
+
+#boxes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.just-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.box-one {
+    background-color: firebrick;
+}
+
+.box-two {
+    background-color: royalblue;
+}
+
+.box-three {
+    background-color: gray;
+}
+
+.box-four {
+    background-color: whitesmoke;
+}
+
+.box-five {
+    background-color: lightskyblue;
+}
+
+.box-six {
+    background-color: lightcoral;
+}
+
+/* Hover */
+
+/* .just-box:hover {
+    border-radius: 50%;
+} */
+
+.box-one:hover {
+    background-color: lightcoral;
+    border-radius: 50%;
+}
+
+.box-two:hover {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid lightskyblue;
+
+}
+
+.box-three:hover {
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.box-four:hover {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid gray;
+}
+
+.box-five:hover {
+    background-color: royalblue;
+    border-radius: 50%;
+}
+
+.box-six:hover {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid firebrick;
+}
+
