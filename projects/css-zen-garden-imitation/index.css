@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile design */
+
+body {
+    width: 100%;
+}
+
+.zen-container {
+    display: grid;
+    grid-template-rows: 9;
+    width: 100%;
+}
+
+.header {
+
+}
+
+.view-design-nav{
+
+}
+
+.designer-list {
+
+}
+
+.main-one {
+    color: #325050;
+    background-color: white;
+}
+
+.main-two {
+    color: #325050;
+    background-color: rgba(138, 188, 159, 0.5);
+}
+
+.main-three {
+    color: #325050;
+    background-color: white;
+}
+
+nav {
+
+}
+
+.empty-div {
+    display: none;
+}
+
+.footer {
+
+}
+
+.icons {
+
+}
