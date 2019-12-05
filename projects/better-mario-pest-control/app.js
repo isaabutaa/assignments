@@ -1,12 +1,12 @@
 const baddieForm = document["baddie-form"]
 
+let grandTotal = 0
 baddieForm.addEventListener("submit", function(event){
     event.preventDefault()
     const coinsForGoombas = Number(baddieForm["goombas-squashed"].value) * 5
     const coinsForBobBombs = Number(baddieForm["bob-bombs-squashed"].value) * 7
     const coinsForCheepCheeps = Number(baddieForm["cheep-cheeps-squashed"].value) * 11
     const totalCoins = coinsForGoombas + coinsForBobBombs + coinsForCheepCheeps
-    let grandTotal = 0
     grandTotal += totalCoins
     // 1. create element that will display the result of coins owed to Mario
     const coinsH3 = document.createElement("h3")

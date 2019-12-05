@@ -6,7 +6,6 @@ const shift = parseInt(readline.question('How many letters would you like to shi
 
 let cipheredString = ""
 function cipher(string, num){
-    const charCode = string.charCodeAt()
     for(let i = 0; i < string.length; i++){
         if(string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122){
             let code = string.charCodeAt(i)

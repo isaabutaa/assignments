@@ -14,9 +14,17 @@ h2 {
     text-align: center;
 }
 
+
 #red-box {
     width: 200px;
     height: 200px;
     background-color: firebrick;
     margin: 0 100px 100px 100px;
+    position: relative;
+}
+#blue-box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
 }
