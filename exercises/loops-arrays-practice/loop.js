@@ -333,11 +333,9 @@ const people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 const upperAlphabet = alphabet.toUpperCase()
 const splitAlphabet = upperAlphabet.split("")
-// console.log(splitAlphabet)
 const alphaPeople = []
 function forception(arr1, arr2) {
   for(let i = 0; i < arr1.length; i++){
-    // console.log(arr1[i])
     alphaPeople.push(`${arr1[i]}:`)
     for(let j = 0; j < arr2.length; j++){
       alphaPeople.push(arr2[j])
