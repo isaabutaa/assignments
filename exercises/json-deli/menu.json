@@ -1,0 +1,67 @@
+{
+    "welcome": [
+        {
+            "welcome message": "Welcome to JSON's Deli. Located right in the heart of Silicon Slopes, we are a one-stop shop offering singular and delicious homemade Italian-inspired sandwiches and desserts. We get people from out of town all the time who want us to open up a shop in their hometown, but being one-of-a-kind is one of the things that make us special. That, and we just love it here. It's our home, and now, it's yours."
+        }
+    ],
+    "appetizers": [
+        {
+            "appetizer": "Mediterranean salad",
+            "ingredients": ["lettuce", "green olives", "assorted tomatoes", "diced cucumber", "olive oil", "salt", "feta cheese(optional"],
+            "description": "This is a refreshing Mediterranean salad that tastes fantastic and gets you ready for your main meal."
+        },
+        {
+            "appetizer": "Toast and butter",
+            "ingredients": ["Italian toast", "butter", "olive oil", "balsamic vinagerette", "herbs"],
+            "description": "You may be thinking, `what's so special about bread and butter?`, but baby, this toast and butter is special. We use imported spices and fresh ingredients to give you a taste of Italy, right here in Silicon Slopes. Spread the butter on the toast, dip it in olive oil or balsamic vinagerette and the herbs, and then enjoy the delightful taste of that toast on your tongue. There ain't nothing like it!"
+        }
+    ],
+    "cold sandwiches": [
+        {
+            "cold sandwich": "Mortadella Fantastica",
+            "ingredients": ["Freshly sliced mortadella", "pickles", "italian mayonaisse", "spinach or lettuce", "sliced tomato"],
+            "description": "Our Mortadella Fantastica is simple, but like it says, it's fantastic! Enjoy this light yet filling sandwich on your lunch break! Served until 5PM."
+        },
+        {
+            "cold sandwich": "Italian Submarine",
+            "ingredients": ["salami", "prosciutto", "lettuce or spinach", "sliced tomato", "banana peppers", "italian mayonaisse", "hot peppers"],
+            "description": "Talk about Italian ingredients! Our salami and prosciutto is authentic and reminds you of back home in Italy. This submarine is lethal!"
+        }
+    ],
+    "hot sandwiches": [
+        {
+            "hot-sandwich": "Silicon cheesesteak",
+            "ingredients": ["steak","provolone cheese","bell peppers", "banana peppers", "grilled onion", "lettuce"],
+            "description": "Our Silcon steak and cheese is better than the Philly cheesesteak. Don't believe us? Give it a try!"
+        },
+        {
+            "hot-sandwich": "JSON's world-famous hot Pastrami",
+            "ingredients": ["thinly-sliced peppered pastrami", "thinly-sliced corned beef", "rye bread", "swiss cheese", "Dijon mustard", "coleslaw"],
+            "description": "JSON's world-famous hot Pastrami sandwich is what put us on the map. Now, people fly from New York just to grab a bite!"
+        }
+    ],
+    "desserts": [
+        {
+            "dessert": "JSON's Original Cheesecake",
+            "ingredients": ["cheesecake"],
+            "description": "The Cheesecake Factory thinks it's got the best cheesecake out there. Well, think again! We do."
+        },
+        {
+            "dessert": "Cinammon Rice Pudding",
+            "ingredients": ["cinammon", "rice", "pudding"],
+            "description": "We at JSON's love rice pudding, and now you do too!"
+        }
+    ],
+    "drinks": [
+        {
+            "drink": "Italian Soda",
+            "ingredients": ["Heart and soul of Italy"],
+            "description": "This soda IS Italy, and Italy IS this soda. That's all their is to it."
+        },
+        {
+            "drink": "JSON's Cola",
+            "ingredients": ["straight-up sugar", "carbonated water"],
+            "description": "You haven't had Cola until you've tried ours!"
+        }
+    ]
+}
