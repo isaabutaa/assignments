@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+
+header {
+    margin-top: 25px;
+}
+
+header h2 {
+    padding: 25px;
+}
+
+main {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
