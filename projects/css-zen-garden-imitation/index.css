@@ -43,7 +43,7 @@ body {
 }
 
 nav {
-
+    grid-row: 9 / 10;
 }
 
 .empty-div {

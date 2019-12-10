@@ -4,7 +4,13 @@
 }
 
 body {
-    background-color: lightcoral;
+    background-color: #555;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
 }
 
 main {
@@ -13,7 +19,8 @@ main {
     margin-top: 100px;
 }
 
-h1 {
+main h1 {
+    text-align: center;
     text-decoration-line: underline;
     margin-bottom: 10px;
 }
