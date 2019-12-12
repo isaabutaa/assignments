@@ -45,15 +45,21 @@ function listToDos(arr) {
             listedItem.removeChild(deleteBtn)
             const updateInput = document.createElement("input")
             updateInput.type = "text"
-            updateInput.placeholder = "change to-do item name"
+            updateInput.value = arr[i].title
+            const updateDescription = document.createElement("input")
+            updateDescription.type = "text"
+            // updateDescription.value = arr[i].description
+            updateDescription.placeholder = "update or add description"
             const newUpdateBtn = document.createElement("button")
             newUpdateBtn.textContent = "update to-do item"
             listedItem.appendChild(updateInput)
+            listedItem.appendChild(updateDescription)
             listedItem.appendChild(newUpdateBtn)
             newUpdateBtn.addEventListener("click", (e) => {
                 e.preventDefault()
                 const titleUpdate = {
-                    title: updateInput.value
+                    title: updateInput.value,
+                    description: updateDescription.value
                 }
 
                 axios.put(`https://api.vschool.io/isa-man/todo/${arr[i]._id}`, titleUpdate)
@@ -82,7 +88,6 @@ function listToDos(arr) {
             axios.put(`https://api.vschool.io/isa-man/todo/${arr[i]._id}`, completeUpdate)
                 .then(response => {
                     listToDos([response.data])
-                    // console.log(response)
                 })
                 .catch(error => console.log(error))
 

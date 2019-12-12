@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.spot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid whitesmoke;
+    margin: 15px;
+    width: 50vw;
+}
+
+.spot img {
+    height: 200px;
+    width: auto;
+    margin-bottom: 15px;
+}
