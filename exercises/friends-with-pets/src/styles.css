@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-color: rgb(179, 225, 172);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin: auto;
+    width: 55vw;
+}
+
+.header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.friend {
+    border: 5px solid rgb(179, 225, 172);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.friend h2 {
+    margin: 0;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+h4 {
+    display: inline;
+}
+
+.pet {
+    margin: auto;
+    text-align: center;
+}
+
+.pet ul {
+    list-style: none;
+}
+
+.pet img{
+    height: 200px;
+    width: auto;
+}
+
