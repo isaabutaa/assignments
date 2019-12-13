@@ -102,7 +102,7 @@ function enemydfnsePtsGenerator(){
 }
 
 function evadeAttack(){
-    return Math.floor(Math.random() * 4)
+    return Math.floor(Math.random() * 2)
 }
 
 function landAttack(){
@@ -201,8 +201,8 @@ while(!gameOver && player.inventory.crystalsInPossession < 5){
                 evadeAttack()
                 console.log("\nYou choose to evade the enemy's attack. Will you be successful?")
                 if(evadeAttack() === 0){
-                    console.log("\nYou were successful in evading your enemy's attack! Your confidence goes up and you gain 5 health points.\n")
-                    player.healthPoints += 5
+                    console.log("\nYou were successful in evading your enemy's attack! Your confidence goes up and you gain 15 health points.\n")
+                    player.healthPoints += 15
                 } else {
                     player.healthPoints -= enemyAtkPtsGenerator()
                     console.log("\nYou were not successful! The enemy landed their attack and your health is now:\n", player.healthPoints)
