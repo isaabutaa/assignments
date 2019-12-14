@@ -17,3 +17,21 @@ function canCapture([yourRook, opponentsRook]) {
 		return false
 	}
 }
+
+// Write three functions to calculate the bitwise AND, bitwise OR and bitwise XOR of two numbers.
+const bitwiseAND = (n1, n2) => n1 & n2
+
+const bitwiseOR = (n1, n2) => n1 | n2
+
+const bitwiseXOR = (n1, n2) => n1 ^ n2
+
+// Given the radius and height of a pizza, calculate the volume
+const volPizza = (radius, height) => Math.round(Math.pow(radius, 2) * height * Math.PI)
+
+// Create a function that takes an array of numbers. Return the largest number in the array.
+function findLargestNum(arr) {
+	const sortedArr = arr.sort((a,b) => {
+		return a - b
+	})
+	return sortedArr[sortedArr.length - 1]
+}
