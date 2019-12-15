@@ -35,3 +35,46 @@ function findLargestNum(arr) {
 	})
 	return sortedArr[sortedArr.length - 1]
 }
+
+// Write a function that transforms all letters from [a,m] to 0 and letters from [n,z] to 1 in a string.
+function convertBinary(str) {
+	const lowStr = str.toLowerCase()
+	let binaryStr = ""
+	for(let i = 0; i < lowStr.length; i++) {
+		if(lowStr[i].charCodeAt() >= 97 && lowStr[i].charCodeAt() <= 109) {
+			binaryStr += "0"
+		} else {
+			binaryStr += "1"
+		}
+	}
+	return binaryStr
+}
+
+// Create a function that takes a number as an argument and returns "Fizz", "Buzz" or "FizzBuzz".
+// If the number is a multiple of 3 the output should be "Fizz".
+// If the number given is a multiple of 5, the output should be "Buzz".
+// If the number given is a multiple of both 3 and 5, the output should be "FizzBuzz".
+// If the number is not a multiple of either 3 or 5, the number should be output on its own as shown in the examples below
+function FizzBuzz(num) {
+	if(num % 3 === 0) {
+		if(num % 3 === 0 && num % 5 === 0) {
+			return "FizzBuzz"
+		}
+		return "Fizz"
+	} else if(num % 5 === 0) {
+		return "Buzz"
+	} else {
+		return num.toString()
+	}
+}
+
+// Create a function that takes in a date and returns the correct century.
+function century(year) {
+	if(year <= 2000){
+		return `${Math.ceil(year / 100)}th century`
+	} else {
+		return `${Math.ceil(year / 100)}st century`
+	}
+}
+	// OR this solution using ES6 and ternary syntax:
+	const century = year => year <= 2000 ? `${Math.ceil(year / 100)}th century` : `${Math.ceil(year / 100)}st century`
