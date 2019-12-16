@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.die {
+    color: #ffffff;
+    margin: 10px;
+}
+
