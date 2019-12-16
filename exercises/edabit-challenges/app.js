@@ -78,3 +78,12 @@ function century(year) {
 }
 	// OR this solution using ES6 and ternary syntax:
 	const century = year => year <= 2000 ? `${Math.ceil(year / 100)}th century` : `${Math.ceil(year / 100)}st century`
+
+// Write a function that calculates the factorial of a number recursively
+function factorial(n) {
+	if(n === 1 || n === 0) {
+		return 1
+	}
+	return n * factorial(n - 1)
+}
+
