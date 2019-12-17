@@ -81,9 +81,20 @@ function century(year) {
 
 // Write a function that calculates the factorial of a number recursively
 function factorial(n) {
-	if(n === 1 || n === 0) {
+	if(n === 1) {
 		return 1
 	}
 	return n * factorial(n - 1)
 }
 
+// Create a function that returns true if the first array can be nested inside the second.
+// arr1 can be nested inside arr2 if:
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+function canNest(arr1, arr2) {
+	const arr1Min = Math.min(...arr1)
+	const arr1Max = Math.max(...arr1)
+	const arr2Min = Math.min(...arr2)
+	const arr2Max = Math.max(...arr2)
+	return arr1Min > arr2Min && arr1Max < arr2Max
+}

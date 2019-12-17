@@ -13,6 +13,7 @@ main {
 .dice-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .die {
