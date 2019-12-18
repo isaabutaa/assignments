@@ -131,8 +131,13 @@ const combineFruit = (fruit, sweets, vegetables) => ({fruit, sweets, vegetables}
 
 
 ///// Use destructuring to make this code ES6:
-const returnFirst = (...items) => items[0]
-// console.log(returnFirst("danish axe", "mace", "jackhammer", "warlock staff"))
+// const returnFirst = (...items) => items[0]
+// items = [1, 2, 3, 4,5 ]
+// function returnFirst(items) {
+//     const [firstItem, secondItem, kjh, kjhkjh] = items;
+//     return firstItem
+// }
+// console.log(returnFirst(items))
 
 
 ///// Write destructuring code to assign variables that will help us return the expected string. Also, change the string to be using Template literals:
@@ -178,7 +183,7 @@ const populatePeople = names => {
         return {firstName, lastName}
     })
 }
-console.log(populatePeople(names))
+// console.log(populatePeople(names))
 //[
 //  {firstName: "Frank", lastName: "Peterson"},
 //  {firstName: "Suzy", lastName: "Degual"},
