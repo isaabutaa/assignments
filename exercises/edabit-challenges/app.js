@@ -98,3 +98,18 @@ function canNest(arr1, arr2) {
 	const arr2Max = Math.max(...arr2)
 	return arr1Min > arr2Min && arr1Max < arr2Max
 }
+
+// Given two integers, a and b, return true if a can be divided evenly by b. Return false otherwise.
+const dividesEvenly = (a, b) => a % b === 0
+
+// Write a function that takes a positive integer and return its factorial.
+const factorial = (z) => z === 0 ? 1 : z * factorial(z - 1)
+
+// Create a function that takes a string and returns a string in which each character is repeated once.
+function doubleChar(str) {
+	const doubleArr = []
+	for(let i = 0; i < str.length; i++) {
+		doubleArr.push(str[i] + str[i])
+	}
+	return doubleArr.join("")
+}
