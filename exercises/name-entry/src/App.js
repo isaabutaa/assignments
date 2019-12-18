@@ -17,16 +17,7 @@ class App extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        const fullName = this.state.firstName + " " + this.state.lastName
-        // const updatedNames = this.setState(prevState => prevState.names.map(name => {
-        //     return [
-        //         ...prevState.names,
-        //         value
-        //     ]
-        // }))
-        // return {
-        //     names: updatedNames
-        // }
+        const fullName = `${this.state.firstName} ${this.state.lastName}`
 
         this.setState(prevState => ({
             firstName: "",
@@ -36,7 +27,6 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.state.names)
         const listOfNames = this.state.names.map(name => <li>{name}</li>)
         return (
             <div>
