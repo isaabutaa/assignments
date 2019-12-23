@@ -119,3 +119,33 @@ let x = /[02468]$/
 
 // Write a function that converts an object into an array, where each element represents a key-value pair.
 const toArray = (obj) => Object.entries(obj)
+
+// Write a function that returns true if all integers in an array are factors of a number, and false otherwise.
+function checkFactors(factors, num) {
+	return factors.every(factor => num % factor === 0)
+}
+
+// Create a function that takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive lower integers.
+function factorial(int) {
+	if(int === 0) {
+		return 1
+	}
+	return int * factorial(int - 1)
+}
+
+// Create a function that takes an array of numbers and return the first and last elements as a new array.
+function firstLast(arr) {
+	const newArr = []
+	newArr.push(arr[0], arr[arr.length - 1])
+	return newArr
+}
+
+// Write a function that calculates the nth Fibonacci number
+function fib(n) {
+	if(n === 0) {
+		return 0
+	} else if(n === 1) {
+		return 1
+	}
+	return fib(n - 1) + fib(n - 2)
+}
