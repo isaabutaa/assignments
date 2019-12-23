@@ -89,16 +89,8 @@ function atkPtsGenerator(){
     return Math.floor(Math.random() * player.maxAttackPoints) 
 }
 
-function dfnsePtsGenerator(){
-    return Math.floor(Math.random() * player.maxDefensePoints)
-}
-
 function enemyAtkPtsGenerator(){
     return Math.floor(Math.random() * enemy.maxAttackPoints)
-}
-
-function enemydfnsePtsGenerator(){
-    return Math.floor(Math.random() * enemy.maxDefensePoints)
 }
 
 function evadeAttack(){
@@ -124,7 +116,7 @@ function enemyGenerator(){
         this.maxAttackPoints = maxAttackPoints,
         this.maxDefensePoints = maxDefensePoints
     }
-    enemy = new Enemy(weaponChoices[Math.floor(Math.random() * 6)], Math.floor(Math.random() * 100))
+    enemy = new Enemy(weaponChoices[Math.floor(Math.random() * 6)], Math.ceil(Math.random() * 100))
     console.log("Your opponent's stats are: \n", enemy)
 }
 
@@ -174,7 +166,7 @@ while(!gameOver && player.inventory.crystalsInPossession < 5){
                         console.log("\nYou defeated your enemy! For winning your match, you have received one time-and-space crystal to add to your inventory.")
                         player.inventory.crystalsInPossession += 1
                         if(player.inventory.crystalsInPossession === 5){
-                            console.log("It seems you have retrieved enough time-and-space crystals to return home. You are the lucky one. Cherish those you love and enjoy the remaining days of your life...\n\nYou are transported back home, but still, you wonder... Was that real?")
+                            console.log("It seems you have retrieved enough time-and-space crystals to return home. You are the lucky one. Cherish those you love and enjoy the remaining days of your life...\n\nYou are transported back home, but still, you wonder... Was that real?\n\n")
                             gameOver = true
                         }
                         else if(player.healthPoints <= 50 && player.inventory.crystalsInPossession < 5){
@@ -206,6 +198,10 @@ while(!gameOver && player.inventory.crystalsInPossession < 5){
                 } else {
                     player.healthPoints -= enemyAtkPtsGenerator()
                     console.log("\nYou were not successful! The enemy landed their attack and your health is now:\n", player.healthPoints)
+                        if(player.healthPoints <= 0) {
+                            console.log("\nYou have been defeated. GAMEOVER")
+                            gameOver = true
+                        }
                 }
             } else if(playerMove === 2){
                 console.log("\nPlayer health points:\n", player.healthPoints)
@@ -217,7 +213,7 @@ while(!gameOver && player.inventory.crystalsInPossession < 5){
     } else if(playerAnswer === 1) {
         console.log("\nPlayer stats:\n", player)
     } else {
-        console.log("\nYou have forfeited your right to return home. You will be trapped here for eternity. GAMEOVER.")
+        console.log("\nYou have forfeited your right to return home. You will be trapped here for eternity. GAMEOVER.\n\n")
         gameOver = true
     }
 }
