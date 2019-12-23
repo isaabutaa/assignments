@@ -116,3 +116,6 @@ function doubleChar(str) {
 
 // Write a regular expression that matches only an even number. Numbers will be presented as strings
 let x = /[02468]$/
+
+// Write a function that converts an object into an array, where each element represents a key-value pair.
+const toArray = (obj) => Object.entries(obj)
