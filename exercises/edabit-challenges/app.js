@@ -149,3 +149,11 @@ function fib(n) {
 	}
 	return fib(n - 1) + fib(n - 2)
 }
+
+// Write a function that takes a string as an argument and returns the left most digit in the string.
+const leftDigit = num => {
+	const numsArr = /[0,1,2,3,4,5,6,7,8,9]/
+	const nums = num.match(numsArr)
+	return Number(nums[0])
+}
+
