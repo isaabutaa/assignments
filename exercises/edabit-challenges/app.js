@@ -157,3 +157,10 @@ const leftDigit = num => {
 	return Number(nums[0])
 }
 
+// Given a word, write a function that returns the first index and the last index of a character.
+function charIndex(word, char) {
+	const arr = word.split("")
+	if(arr.includes(char)) {
+		return [arr.indexOf(char), arr.lastIndexOf(char)]
+	}
+}
