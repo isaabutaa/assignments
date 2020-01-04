@@ -39,6 +39,7 @@ body {
 .designer-list ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 10% 0 10%;
 }
 
 .resources ul li {
@@ -72,9 +73,10 @@ li a {
 }
 
 .main-blocks {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    /* width: 80%; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding: 15px 10%;
 }
 
 h3 {
@@ -101,12 +103,11 @@ p, span, h3 {
 
 .main-one, .main-three {
     background-color: white;
-    padding: 15px 25px;
 }
 
 .main-two {
     background-color: rgba(138, 188, 159, 0.5);
-    padding: 15px 25px;
+    
 }
 
 .resources {
@@ -117,6 +118,7 @@ p, span, h3 {
 .resources ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 10% 0 10%;
 }
 
 .nav {
@@ -129,12 +131,12 @@ p, span, h3 {
 
 .footer {
     text-align: center;
-    padding: 15px 25px;
+    padding: 15px 10%;
     border: 2px solid black;
 }
 
 .icons {
-    padding: 15px 25px;
+    padding: 15px 10%;
     border: 2px solid black;
 }
 
