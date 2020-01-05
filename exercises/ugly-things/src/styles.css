@@ -1,0 +1,19 @@
+.cute-form {
+    width: 300px;
+    background-color: coral;
+    text-align: center;
+    padding: 15px;
+}
+
+.cute-thing {
+    width: 500px;
+    background-color: lightcoral;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+}
+
+.cute-thing img {
+    width: 400px;
+    height: auto;
+}

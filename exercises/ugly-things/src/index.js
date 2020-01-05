@@ -3,5 +3,11 @@ import ReactDOM from "react-dom"
 
 import "./styles.css"
 import App from "./App"
+import {CuteThingProvider} from "./CuteThingContext"
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(
+    <CuteThingProvider>
+        <App />
+    </CuteThingProvider>, 
+    document.getElementById("root")
+)
