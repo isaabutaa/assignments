@@ -164,3 +164,15 @@ function charIndex(word, char) {
 		return [arr.indexOf(char), arr.lastIndexOf(char)]
 	}
 }
+
+// Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+const lessThan100 = (a, b) => a + b < 100 ? true : false
+
+// Create a function that checks if the argument is an integer or a string. Return int if it's an integer and str if it's a string.
+const intOrString = (param) => typeof param === "string" ? "str" : "int"
+
+// A number added with its additive inverse equals zero. Create a function that returns an array of additive inverses.
+const additiveInverse = arr => arr.map(el => el * -1)
+
+// Write a function that returns true if there exists at least one number that is larger than or equal to n.
+const existsHigher = (arr, n) => arr.some(el => el < n ? false : true)
