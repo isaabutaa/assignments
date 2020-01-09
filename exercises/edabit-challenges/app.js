@@ -176,3 +176,23 @@ const additiveInverse = arr => arr.map(el => el * -1)
 
 // Write a function that returns true if there exists at least one number that is larger than or equal to n.
 const existsHigher = (arr, n) => arr.some(el => el < n ? false : true)
+
+// Create a function that adds a string ending to each member in an array.
+const addEnding = (arr, ending) => arr.map(word => `${word}${ending}`)
+
+// Write a function that maps files to their extension names
+const getExtension = arr => arr.map(file => {
+	const onlyExtensions = file.split(".")
+	return onlyExtensions.pop()
+})
+
+// Write a function that partitions the array into two subarrays: one with all even integers, and the other with all odd integers. 
+function evenOddPartition(arr) {
+	const evens = []
+	const odds = []
+	arr.filter(int => int % 2 === 0 ? evens.push(int) : odds.push(int))
+	return [evens, odds]
+}
+
+// Create a function that filters out an array to include numbers who only have a certain number of digits.
+const filterDigitLength = (arr, num) => arr.filter(int => int.toString().length === num)
