@@ -14,6 +14,12 @@ class App extends React.Component {
         this.bottomRightClick = this.bottomRightClick.bind(this)
     }
 
+    // handleClick() {
+    //     this.setState(prevState => {
+    //         prevState.colors.map(color => color.color === "white" ? {...color, color: "black"} : {...color, color: "white"})
+    //     })
+    // }
+
     handleClick() {
         for(let i = 0; i < this.state.colors.length; i++) {
             if(this.state.colors[i].color === "white") {
