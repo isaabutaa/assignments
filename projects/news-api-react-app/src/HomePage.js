@@ -36,19 +36,25 @@ export default function HomePage() {
     })
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="home-content-container">
+            <form onSubmit={handleSubmit} id="search-form">
                 <input 
-                    onChange={handleChange} 
+                    onChange={handleChange}
                     type="text" 
                     name="searchKeyword" 
                     value ={inputData.searchKeyword} 
-                    placeholder="Enter search keyword"
+                    placeholder="Enter search keyword to find relevant news articles"
                 />
                 <button>Search</button>
             </form>
-            <h2 style={{display: toggleH2 ? "block" : "none"}}>Search results for '{`${forVariable.searchTerm.charAt(0).toUpperCase()}${forVariable.searchTerm.slice(1)}`}' <span style={{fontSize: "15px"}}>(Powered by <a href="https://newsapi.org">News API)</a></span>: </h2>
+            <h2 style={{display: toggleH2 ? "block" : "none"}}>Search results for '{`${forVariable.searchTerm.charAt(0).toUpperCase()}${forVariable.searchTerm.slice(1)}`}' <span>(Powered by <a href="https://newsapi.org">News API)</a></span>: </h2>
             {articleList}
+            <div className="article">
+            <img src="https://images.unsplash.com/photo-1577099625292-b8df48b73c04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""/>
+            <h2><a href="">Hamsters all over the world turn on owners</a></h2>
+            <p className="description"> There is no apparent reason, but reports are coming in from all over the world that hamsters are turning on their owners. </p>
+            <p className="source">Source: The Onion </p>
+        </div>
         </div>
     )
 }

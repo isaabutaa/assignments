@@ -1,0 +1,117 @@
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: #262626;
+}
+
+/* Laptop-size styling */
+
+.header {
+    text-align: center;
+    background-color: ghostwhite;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header h1, .header h3 {
+    color: 	#262626;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header h3 > a {
+    color: #4876ff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+    width: 100vw;
+    background-color: ghostwhite;
+}
+
+.nav-link {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #4876ff;
+    text-decoration-line: none;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.home-content-container h2 {
+    text-align: center;
+    color: ghostwhite;
+}
+
+.home-content-container h2 > span {
+    font-size: 15px;
+}
+
+.home-content-container h2 > span > a {
+    color: #4876ff;
+}
+
+#search-form {
+    width: 60vw;
+    margin: 50px auto;
+    background-color: ghostwhite;
+    padding: 10px 15px;
+}
+
+#search-form input {
+    width: 85%;
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #262626;
+}
+
+#search-form button {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 20px;
+    border: 1px solid #262626;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 300px, 350px;
+    grid-template-rows: repeat(3, 70px);
+    border-top: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+    padding: 10px 15px;
+    width: 60vw;
+    margin: auto;
+    background-color: ghostwhite;
+}
+
+.article img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    width: 300px;
+    height: auto;
+}
+
+.article h2 > a {
+    color: #4876ff;
+    text-decoration-line: none;
+}
+
+.article h2, .article p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-left: 25px
+}
+
+.article .description {
+    grid-row: 2 / 3;
+}
+
+.article .source {
+    grid-row: 3 / 4;
+}
+
+/* Mobile design */
