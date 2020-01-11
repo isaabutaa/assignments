@@ -1,13 +1,24 @@
-import React from "react"
+import React, {useState} from "react"
 import {Link} from "react-router-dom"
 
 import myFace from "./IMG_2215.png"
+import myOtherFace from "./IMG_2216.png"
 
 export default function Header() {
+    const [img, setImg] = useState(myFace)
+
+    function swapFaces() {
+        setImg(myOtherFace)
+    }
+
+    function againSwapFaces() {
+        setImg(myFace)
+    }
+
     return (
         <div>
             <header className="header">
-                <img src={myFace} alt="face"/>
+                <img onMouseOver={swapFaces} onMouseLeave={againSwapFaces} src={img} alt="face"/>
                 <h1 >Welcome to <span className="block-letter">newSSource</span></h1>
                 <h3>Powered by <a href="https://newsapi.org">News API</a></h3>
             </header>
