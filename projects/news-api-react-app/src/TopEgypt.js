@@ -1,20 +1,26 @@
 import React, {useState, useEffect} from "react"
 import Axios from "axios"
 
-export default function TopBbcNews() {
-    const [bbcNewsArticles, setBbcNews] = useState([])
+export default function TopEgypt() {
+    const [arabicArticles, setArabicArticles] = useState([])
 
-    useEffect(() => getBbcNews(), [])
+    useEffect(() => {
+        let mounted = true
+        if(mounted) {
+            getArabicNews()
+        }
+        return () => mounted = false
+    }, [])
 
-    function getBbcNews() {
-        Axios.get("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=6ea74b184e1d46f1b33560fb48edd364")
+    function getArabicNews() {
+        Axios.get('https://newsapi.org/v2/top-headlines?country=eg&apiKey=6ea74b184e1d46f1b33560fb48edd364')
             .then(response => {
-                const bbcArticles = response.data.articles
-                setBbcNews([...bbcArticles])
+                const articles = response.data.articles
+                setArabicArticles([...articles])
             })
     }
 
-    const newsArticles = bbcNewsArticles.map((article, i) => {
+    const arabicResults = arabicArticles.map((article, i) => {
         return (
             <div className="article" key={article.title + i.toString()}>
                 <img style={{width: "300px", height: "auto"}} src={article.urlToImage} alt=""/>
@@ -27,7 +33,7 @@ export default function TopBbcNews() {
 
     return (
         <div className="article-container">
-            {newsArticles}
+            {arabicResults}
         </div>
     )
 }

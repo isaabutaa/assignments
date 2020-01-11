@@ -4,7 +4,7 @@ export default function ArticleList({article}) {
     return (
         <div className="article">
             <img style={{width: "300px", height: "auto"}} src={article.urlToImage} alt=""/>
-            <h2><a href={article.url}>{article.title}</a></h2>
+            <h3><a href={article.url}>{article.title}</a></h3>
             <p> {article.description} </p>
             <p>Source: {article.source.name}</p>
         </div>
