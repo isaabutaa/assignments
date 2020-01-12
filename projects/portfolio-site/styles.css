@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: ivory;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    height: 300px;
+    width: auto;
+}
+
+.resume-plus {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.resume-plus .resume {
+    text-align: center;
+}
+
+.resume-plus .linked-in {
+    text-align: center;
+}
+
+.project-container {
+    text-align: center;
+}
+
+.skills {
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+}
