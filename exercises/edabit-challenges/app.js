@@ -196,3 +196,14 @@ function evenOddPartition(arr) {
 
 // Create a function that filters out an array to include numbers who only have a certain number of digits.
 const filterDigitLength = (arr, num) => arr.filter(int => int.toString().length === num)
+
+// An array is special, if every even index contains an even number and every odd index contains an odd number. Create a function that returns true if an array is special, and false otherwise.
+const isSpecialArray = (arr) => {
+	return arr.every((int, i) => {
+		if(i % 2 === 0) {
+			return int % 2 === 0
+		} else if(i % 2 !== 0) {
+			return int % 2 !== 0
+		}
+	})
+}
