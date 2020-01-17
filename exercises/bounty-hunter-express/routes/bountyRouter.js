@@ -33,6 +33,7 @@ bountyRouter.get("/", (req, res) => {
 // POST One
 bountyRouter.post("/", (req, res) => {
     const newBounty = req.body
+    newBounty.isLiving = true
     newBounty._id = uuid()
     bounties.push(newBounty)
     res.send(`Successfully added '${newBounty.firstName} ${newBounty.lastName}' to the bounties list`)
