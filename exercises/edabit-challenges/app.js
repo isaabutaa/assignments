@@ -207,3 +207,24 @@ const isSpecialArray = (arr) => {
 		}
 	})
 }
+
+// Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+function getAbsSum(arr) {
+	let sum = 0
+	for(let i = 0; i < arr.length; i++) {
+		if(arr[i] < 0) {
+			sum += arr[i] * -1
+		} else {
+			sum += arr[i]
+		}
+	}
+	return sum
+} // Or this way:
+function getAbsSum(arr) {
+	return arr.reduce((count, num) => count + Math.abs(num), 0)
+}
+
+// A set is a collection of unique items. A set can be formed from an array from removing all duplicate items. Create a function that transforms an array into a set. For this question, output an array, not a set.
+const set = (arr) => arr.filter((num, i) => {
+	return arr.indexOf(num) === i
+})
