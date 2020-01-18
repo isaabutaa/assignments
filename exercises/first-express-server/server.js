@@ -7,5 +7,6 @@ app.use(express.json()) // looks for a request body, and turns it into 'req.body
 // Routes //
 app.use("/movies", require("./routes/movieRouter.js"))
 app.use("/tvshows", require("./routes/tvShowRouter"))
+app.use("/fruits", require("./routes/fruitRouter"))
 
 app.listen(9000, () => console.log("server is running on port 9000"))
