@@ -1,5 +1,5 @@
 const express = require('express')
-const movieRouter =express.Router()
+const movieRouter = express.Router()
 const uuid = require("uuid/v4")
 
 // fake movie data //
