@@ -36,7 +36,7 @@ bountyRouter.post("/", (req, res) => {
     newBounty.isLiving = true
     newBounty._id = uuid()
     bounties.push(newBounty)
-    res.send(`Successfully added '${newBounty.firstName} ${newBounty.lastName}' to the bounties list`)
+    res.send(newBounty)
 })
 
 // DELETE One
@@ -44,7 +44,7 @@ bountyRouter.delete("/:bountyId", (req, res) => {
     const bountyId = req.params.bountyId
     const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
     bounties.splice(bountyIndex, 1)
-    res.send("Successfully removed bounty from the universe")
+    res.send(bounties)
 })
 
 // PUT/Update One
