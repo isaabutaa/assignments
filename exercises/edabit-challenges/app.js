@@ -228,3 +228,12 @@ function getAbsSum(arr) {
 const set = (arr) => arr.filter((num, i) => {
 	return arr.indexOf(num) === i
 })
+
+// Create a function that takes width and height and finds the perimeter of a rectangle.
+const findPerimeter = (height, width) => (height * 2) + (width * 2)
+
+// Create a function that returns true when num1 is equal to num2.
+const isSameNum = (num1, num2) => num1 === num2
+
+// return true if last charact of argument is "n"
+const isLastCharacterN = (word) => word[word.length - 1] === "n"
