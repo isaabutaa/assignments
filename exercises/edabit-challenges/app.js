@@ -237,3 +237,32 @@ const isSameNum = (num1, num2) => num1 === num2
 
 // return true if last charact of argument is "n"
 const isLastCharacterN = (word) => word[word.length - 1] === "n"
+
+// Create a function that takes a whole number as input and returns the shape with that number's amount of sides. Here are the expected outputs to get from these inputs.
+function nSidedShape(n) {
+	const shapesObj = {
+		1:	"circle",
+		2:	"semi-circle",
+		3:	"triangle",
+		4:	"square",
+		5:	"pentagon",
+		6:	"hexagon",
+		7:	"heptagon",
+		8:	"octagon",
+		9:	"nonagon",
+		10:	"decagon"
+	}
+	return shapesObj[n]
+}
+
+// An overlapped clap is a clap which starts but doesn't finish, as in 'ClaClap' (The first clap is cut chort and there are overall 2 claps)
+// Given a string of what the overlapping claps sounded like, return how many claps were made in total.
+function countClaps(txt) {
+	let count = 0
+	for(let i = 0; i < txt.length; i++) {
+		if(txt[i] === "C") {
+			count += 1
+		}
+	}
+	return count
+}
