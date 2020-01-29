@@ -77,5 +77,15 @@ movieRouter.get("/search/genre", (req, res, next) => {
     })
 })
 
+// mothersMedRouter.get("/search/popularUse", (req, res, next) => {
+//     Herbs.find({ popularUse: req.query.popularUse }, (err, herbs) => {
+//         if(err) {
+//             res.status(500)
+//             return next(err)
+//         }
+//         res.status(200).send(herbs)
+//     })
+// })
+
 
 module.exports = movieRouter

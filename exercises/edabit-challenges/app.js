@@ -266,3 +266,6 @@ function countClaps(txt) {
 	}
 	return count
 }
+
+// Count the number of vowels in a string
+const countVowels = str => str.match(/[aeiou]/gi).length
