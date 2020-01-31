@@ -269,3 +269,10 @@ function countClaps(txt) {
 
 // Count the number of vowels in a string
 const countVowels = str => str.match(/[aeiou]/gi).length
+
+// Create a function that takes an array and returns the sum of all numbers in the array.
+const getSumOfItems = arr => {
+	return arr.reduce((acc, num) => {
+		return acc + num
+	})
+}
