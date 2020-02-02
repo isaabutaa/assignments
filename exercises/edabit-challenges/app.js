@@ -276,3 +276,5 @@ const getSumOfItems = arr => {
 		return acc + num
 	})
 }
+// Create a function that takes an array with numbers and return an array with the elements multiplied by two.
+const getMultipliedArr = arr => arr.map(num => num * 2)
