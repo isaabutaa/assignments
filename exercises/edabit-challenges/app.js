@@ -278,3 +278,57 @@ const getSumOfItems = arr => {
 }
 // Create a function that takes an array with numbers and return an array with the elements multiplied by two.
 const getMultipliedArr = arr => arr.map(num => num * 2)
+
+// Write a function that takes an integer and:
+// If the number is a multiple of 3, return "Hello".
+// If the number is a multiple of 5, return "World".
+// If the number is a multiple of both 3 and 5, return "Hello World".
+const helloWorld = num => {
+	if(num % 3 === 0) {
+		if(num % 5 === 0) {
+			return "Hello World"
+		}
+		return "Hello"
+	} else {
+		return "World"
+	}
+}
+
+// Given a fraction as a string, return whether or not it is greater than 1 when evaluated.
+const greaterThanOne = frac => {
+	const quotient = eval(frac)
+	return quotient > 1 ? true : false
+}
+
+// Create a function that flips M's to W's (all uppercase).
+function wumbo(words) {
+	const wordsArr = words.split("")
+	const regex = /M/gi
+	return wordsArr.map(el => el.replace(regex, "W")).join("")
+}
+
+// Create a function that takes a string and returns a string with spaces in between all of the characters.
+function spaceMeOut(str) {
+	return str
+		.split("")
+		.map(char => str.indexOf(char) !== str.length - 1 ? char + " " : char)
+		.join("")
+}
+// another method:
+function spaceMeOut(str) {
+	return str.split("").join(" ")
+}
+
+// Create a function that takes two parameters and, if both parameters are strings, add them as if they were integers or if the two parameters are integers, concatenate them
+function stupidAddition(a, b) {
+	if(typeof a === "number" && typeof b === "number") {
+		return a.toString() + b.toString()
+	} else if(typeof a === "string" && typeof b === "string") {
+		return Number(a) + Number(b)
+	} else {
+		return null
+	}
+}
+
+// Create a function that returns the ASCII value of the passed in character
+const ctoa = c => c.charCodeAt()
