@@ -332,3 +332,14 @@ function stupidAddition(a, b) {
 
 // Create a function that returns the ASCII value of the passed in character
 const ctoa = c => c.charCodeAt()
+
+// 
+function getEquivalent(note) {
+	// replace b with # and vice versa
+	return note
+					.split("")
+					.map(el => el === "#" ? "b" : el && el === "b" ? "#" : el)
+					.join("")
+	// replace letter with new letter
+	
+}

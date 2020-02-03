@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+}
+
+.col-1 {
+    background-color: red;
+}
+.col-2 {
+    background-color: white;
+    color: black;
+}
+.col-3 {
+    background-color: blue;
+}
