@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const morgan = require("morgan")
 const mongoose = require("mongoose")
+const PORT = 9000
 
 //Middleware - a function that fires on the in-between //
 app.use(express.json()) // looks for a request body, and turns it into 'req.body'
@@ -30,4 +31,4 @@ app.use((err, req, res, next) => {
     return res.send({errorMsg: err.message})
 })
 
-app.listen(9000, () => console.log("server is running on port 9000"))
+app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
