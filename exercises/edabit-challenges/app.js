@@ -343,3 +343,18 @@ function getEquivalent(note) {
 	// replace letter with new letter
 	
 }
+
+// Given an array of 10 numbers, return the maximum possible total made by summing just 5 of the 10 numbers.
+const maxTotal = nums => {
+	const biggestNums = nums.sort((a, b) => a - b).slice(-5)
+	return biggestNums.reduce((acc, num) =>  acc += num, 0)
+}
+
+// Write a function that takes the last number of a consecutive list of numbers and returns the total of all numbers up to and including it.
+function addUpTo(n) {
+	let total = 0
+	for(let i = 1; i <= n; i++) {
+		total += i
+	}
+	return total
+}
