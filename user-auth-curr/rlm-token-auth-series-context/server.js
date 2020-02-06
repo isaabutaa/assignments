@@ -5,9 +5,11 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require("express-jwt")
 
+// middleware
 app.use(express.json())
 app.use(morgan('dev'))
 
+// connect to DB
 mongoose.connect(
   'mongodb://localhost:27017/user-authentication',
   {
@@ -19,6 +21,7 @@ mongoose.connect(
   () => console.log('Connected to the DB')
 )
 
+// routes
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", expressJwt({ secret: process.env.SECRET })) // req.user(payload)
 app.use('/api/todo', require('./routes/todoRouter.js'))
