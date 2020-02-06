@@ -22,7 +22,7 @@ todoRouter.get("/user", (req, res, next) => {
     }
     return res.status(200).send(todos)
   })
-})
+}) 
 
 // Add new Todo
 todoRouter.post("/", (req, res, next) => {
