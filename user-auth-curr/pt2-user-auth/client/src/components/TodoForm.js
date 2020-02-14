@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { PromiseProvider } from 'mongoose'
 
 const initInputs = {
   title: "",
